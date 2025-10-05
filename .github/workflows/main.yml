@@ -1,0 +1,18 @@
+# the keys (blue color) are given to you by githubactions
+# you cnanot change them
+name: Run linux commands
+# on what event we have to run the workflow - this time run the WF manually 
+on: workflow_dispatch 
+jobs:
+  job1: # give name to the job 
+    runs-on: ubuntu-latest    # run the job where? - on the ubuntu VM 
+    steps:
+      - name: execute linux command 
+        run: echo "Hello All !" 
+  job2:
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Exeucte set of linux commands 
+      run: |
+       hostname -s 
+       echo "Thank you All !"
